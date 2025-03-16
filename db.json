@@ -1,0 +1,79 @@
+{
+  "buildings": [
+    {
+      "id": "1",
+      "name": "Офисное здание A"
+    },
+    {
+      "id": "2",
+      "name": "Склад B"
+    }
+  ],
+  "sensors": [
+    {
+      "id": "2",
+      "name": "Датчик дыма 1",
+      "type": "Дым",
+      "status": "Неактивен",
+      "buildingId": 1
+    },
+    {
+      "id": "3",
+      "name": "Датчик температуры 2",
+      "type": "Температура",
+      "status": "Активен",
+      "buildingId": 2
+    },
+    {
+      "id": "aa69",
+      "name": "Складской",
+      "type": "Датчик температуры",
+      "status": "Активен",
+      "buildingId": 1
+    },
+    {
+      "id": "1ec1",
+      "name": "Проходная",
+      "type": "Датчик дыма",
+      "status": "Активен",
+      "buildingId": 2
+    },
+    {
+      "id": "8e6a",
+      "name": "Датчик в офисе",
+      "type": "Дым",
+      "status": "Активен",
+      "buildingId": 1
+    }
+  ],
+  "events": [
+    {
+      "id": "1",
+      "sensorId": 1,
+      "sensorName": "Датчик температуры 1",
+      "eventType": "Срабатывание",
+      "timestamp": "2025-03-15T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "sensorId": 2,
+      "sensorName": "Датчик дыма 1",
+      "eventType": "Срабатывание",
+      "timestamp": "2025-03-15T12:05:00Z"
+    },
+    {
+      "id": "3",
+      "sensorId": 3,
+      "sensorName": "Датчик температуры 2",
+      "eventType": "Срабатывание",
+      "timestamp": "2025-03-15T12:10:00Z"
+    },
+    {
+      "id": "568d",
+      "sensorId": 1,
+      "sensorName": "Датчик температуры 1",
+      "eventType": "Пожар",
+      "timestamp": "2025-03-15T12:34:56.789Z"
+    }
+  ]
+}
