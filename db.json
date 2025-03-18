@@ -11,11 +11,11 @@
   ],
   "sensors": [
     {
-      "id": "2",
       "name": "Датчик дыма 1",
       "type": "Дым",
       "status": "Неактивен",
-      "buildingId": 1
+      "buildingId": 1,
+      "id": "2"
     },
     {
       "id": "3",
