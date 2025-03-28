@@ -10,7 +10,7 @@ const EventLog = () => {
   useEffect(() => {
     const loadEvents = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/events');
+        const response = await axios.get('/api/events');
         setEvents(response.data); // Устанавливаем данные в состояние
       } catch (error) {
         setError('Ошибка загрузки событий. Попробуйте снова.'); // Устанавливаем ошибку

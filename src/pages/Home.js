@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const loadBuildings = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/buildings');
+        const response = await axios.get('/api/buildings');
         setBuildings(response.data);
       } catch (error) {
         setError('Ошибка загрузки данных. Попробуйте снова.');

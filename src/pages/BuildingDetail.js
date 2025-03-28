@@ -15,11 +15,11 @@ const BuildingDetail = () => {
     const loadData = async () => {
       try {
         // Загружаем данные о здании
-        const buildingResponse = await axios.get(`http://localhost:5000/buildings/${id}`);
+        const buildingResponse = await axios.get(`/api/buildings/${id}`);
         setBuilding(buildingResponse.data);
 
         // Загружаем данные о датчиках
-        const sensorsResponse = await axios.get(`http://localhost:5000/sensors?buildingId=${id}`);
+        const sensorsResponse = await axios.get(`/api/sensors?buildingId=${id}`);
         setSensors(sensorsResponse.data);
       } catch (error) {
         setError('Ошибка загрузки данных. Попробуйте снова.');
@@ -35,7 +35,7 @@ const BuildingDetail = () => {
   // Функция для удаления датчика
   const deleteSensor = async (sensorId) => {
     try {
-      await axios.delete(`http://localhost:5000/sensors/${sensorId}`);
+      await axios.delete(`/api/sensors/${sensorId}`);
       setSensors(sensors.filter(sensor => sensor.id !== sensorId)); // Удаляем датчик из списка
     } catch (error) {
       setError('Ошибка удаления датчика. Попробуйте снова.');

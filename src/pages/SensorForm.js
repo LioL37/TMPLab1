@@ -16,7 +16,7 @@ const SensorForm = () => {
     if (sensorId) {
       const loadSensor = async () => {
         try {
-          const response = await axios.get(`http://localhost:5000/sensors/${sensorId}`);
+          const response = await axios.get(`/api/sensors/${sensorId}`);
           nameRef.current.value = response.data.name;
           typeRef.current.value = response.data.type;
           statusRef.current.value = response.data.status;
@@ -45,11 +45,11 @@ const SensorForm = () => {
     try {
       if (isEditMode) {
         // Редактирование датчика
-        await axios.put(`http://localhost:5000/sensors/${sensorId}`, sensorData);
+        await axios.put(`/api/sensors/${sensorId}`, sensorData);
         alert('Датчик обновлен!');
       } else {
         // Добавление нового датчика
-        await axios.post('http://localhost:5000/sensors', sensorData);
+        await axios.post('/api/sensors', sensorData);
         alert('Датчик добавлен!');
       }
       navigate(`/building/${buildingId}`); // Возврат на страницу здания
